@@ -45,7 +45,13 @@ npm install --save easy-umi-request-cancel
 ## Example
 
 ```javascript
-import request, { extend } from "easy-umi-request-cancel";
+import cancelMiddleware from "easy-umi-request-cancel";
+import request, { extend } from 'umi-request'
+
+request.use(
+  cancelMiddleware,
+  { core: true }
+)
 
 const req = extend({
   timeout: 3000,
@@ -58,7 +64,6 @@ request
   .get("/api/v1/xxx?id=1", {
     cancelKey: "cancelKey1", // 第一优先级
   })
-
 ```
 
 ## Thanks

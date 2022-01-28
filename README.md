@@ -46,6 +46,12 @@ npm install --save easy-umi-request-cancel
 
 ```javascript
 import cancelMiddleware from "easy-umi-request-cancel";
+import request, { extend } from 'umi-request'
+
+request.use(
+  cancelMiddleware,
+  { core: true }
+)
 
 const req = extend({
   timeout: 3000,
