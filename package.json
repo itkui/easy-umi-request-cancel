@@ -1,6 +1,6 @@
 {
   "name": "easy-umi-request-cancel",
-  "version": "1.1.4",
+  "version": "1.1.0",
   "description": "umi-request cancel by key",
   "main": "./lib/easy-umi-request-cancel.umd.js",
   "module": "./lib/easy-umi-request-cancel.es.js",
