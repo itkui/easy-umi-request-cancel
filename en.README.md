@@ -1,16 +1,16 @@
-# umi-request-cancel
+# easy-umi-request-cancel
 
 umi-request cancel lib, you can easy cancel your request.
 
-[Chinese documents](https://github.com/itkui/umi-request-cancel/blob/master/README.md)|[English documents](https://github.com/itkui/umi-request-cancel/blob/master/en.README.md)
+[Chinese documents](https://github.com/itkui/easy-umi-request-cancel/blob/master/README.md)|[English documents](https://github.com/itkui/easy-umi-request-cancel/blob/master/en.README.md)
 
-[![NPM version](https://img.shields.io/badge/npm-v1.1.4-blue?style=flat)](https://www.npmjs.com/package/umi-request-cancel)
+[![NPM version](https://img.shields.io/badge/npm-v1.1.4-blue?style=flat)](https://www.npmjs.com/package/easy-umi-request-cancel)
 
 ## Installation
 
 ```shell
-yarn add umi-request-cancel
-npm install --save umi-request-cancel
+yarn add easy-umi-request-cancel
+npm install --save easy-umi-request-cancel
 ```
 
 ## ExtraOptions
@@ -45,7 +45,7 @@ npm install --save umi-request-cancel
 ## Example
 
 ```javascript
-import request, { extend } from "umi-request-cancel";
+import request, { extend } from "easy-umi-request-cancel";
 
 const req = extend({
   timeout: 3000,

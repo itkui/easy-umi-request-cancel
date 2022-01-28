@@ -1,5 +1,3 @@
-import { RequestOptions } from "../types"
-
 const formatUrl = (url: string, base?: string) => {
   try {
     return new URL(url, base || (window && window.location ? window.location.origin : '/'))
@@ -8,7 +6,7 @@ const formatUrl = (url: string, base?: string) => {
   }
 }
 
-const praseUrlUnique = (options: RequestOptions) => {
+const praseUrlUnique = (options: CancelOptions) => {
   const { urlUnique = '', url, urlBase } = options
   const { host, pathname = '', search = '', href } = formatUrl(url, urlBase)
   if (urlUnique instanceof RegExp) {
@@ -28,7 +26,7 @@ const praseUrlUnique = (options: RequestOptions) => {
   }
 }
 
-export const urlUniqueListCancelKey = (options: RequestOptions) => {
+export const urlUniqueListCancelKey = (options: CancelOptions) => {
   const { urlUniqueList = [], url, urlUnique, urlBase } = options
 
   const requestCancelKeyFor = praseUrlUnique(options)
@@ -41,7 +39,7 @@ export const urlUniqueListCancelKey = (options: RequestOptions) => {
   }
 }
 
-export const urlUniqueCancelKey = (options: RequestOptions) => {
+export const urlUniqueCancelKey = (options: CancelOptions) => {
   const cancelKeyFor = praseUrlUnique(options)
 
   if (cancelKeyFor) {

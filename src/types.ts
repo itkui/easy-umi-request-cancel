@@ -1,19 +1,13 @@
-import { Context } from "umi-request";
-
+import { RequestOptionsInit } from 'umi-request'
 declare global {
   export type UrlUnique = 'host' | 'path' | 'search' | RegExp
-  export interface CancelOptions {
+  export interface CancelOptions extends RequestOptionsInit {
     cancelKey?: string;
     urlUnique?: UrlUnique;
     urlBase?: string;
     urlUniqueList?: string[];
   }
+
 }
 
-declare module "umi-request" {
-  interface RequestOptionsInit extends CancelOptions { }
-}
-
-type Options = Context["req"]["options"];
-
-export type RequestOptions = CancelOptions & Options;
+export { }
