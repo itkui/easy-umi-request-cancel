@@ -16,10 +16,7 @@
   },
   "bugs": "https://github.com/itkui/easy-umi-request-cancel/issues",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc & vite build",
-    "dev:server": "cd server && node ./index.js",
-    "start": "yarn dev & yarn dev:server"
+    "build": "tsc & vite build"
   },
   "keywords": [
     "easy-umi-request-cancel",
